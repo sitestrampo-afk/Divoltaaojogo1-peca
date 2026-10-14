@@ -1,33 +1,72 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#c5f25b" />
-  <meta name="description" content="Divolta Autopeças. Encontre a peça certa para colocar seu carro de volta ao jogo." />
-  <title>Divolta — Autopeças</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c5f25b">
+  <meta name="description" content="Divolta Autopeças: consulte peças e solicite seu orçamento pelos canais de atendimento da loja.">
+  <title>Divolta Autopeças | Atendimento</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="announcement">Seu carro de volta ao jogo. <span>A peça certa está aqui.</span><span class="announcement-right">CATÁLOGO DEMONSTRATIVO</span></div>
-  <header class="header">
-    <a class="logo" href="#" aria-label="Divolta início">di<span>volta</span><i></i><small>AUTOPEÇAS</small></a>
-    <form class="search" id="search-form"><span data-icon="search"></span><input id="search" type="search" placeholder="Busque por peça, marca ou código…" aria-label="Buscar peças" /><kbd>/</kbd></form>
-    <div class="header-actions"><button id="favorites-button" class="icon-button" aria-label="Mostrar favoritos"><span data-icon="heart"></span></button><button id="cart-button" class="cart-button" aria-label="Abrir carrinho"><span data-icon="bag"></span><span class="cart-label">Carrinho</span><b id="cart-count">0</b></button></div>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="top-bar">Seu carro de volta ao jogo. <span>A peça certa começa com uma boa conversa.</span></div>
+  <header class="header container">
+    <a class="logo" href="#inicio" aria-label="Divolta Autopeças — início">di<span>volta</span><b>.</b><small>AUTOPEÇAS</small></a>
+    <nav aria-label="Navegação principal"><a href="#pecas">Peças</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a></nav>
+    <a class="button button-small" href="#contato">Fale com a gente <span aria-hidden="true">↗</span></a>
   </header>
-  <nav class="nav" aria-label="Navegação principal"><a href="#catalog" class="nav-main"><span data-icon="grid"></span> Todas as peças</a><a href="#catalog" data-nav-category="Motor">Motor</a><a href="#catalog" data-nav-category="Freios">Freios</a><a href="#catalog" data-nav-category="Suspensão">Suspensão</a><a href="#catalog" data-nav-category="Elétrica">Elétrica</a><a href="#catalog" data-nav-category="Filtros">Filtros</a><a href="#about" class="nav-about">Conheça a Divolta <span>↗</span></a></nav>
-  <main>
-    <section class="hero">
-      <div class="hero-copy"><div class="eyebrow"><span></span> CUIDAR DO SEU CARRO COMEÇA AQUI</div><h1>Novas peças.<br>Novos <em>caminhos.</em></h1><p>Da manutenção de rotina ao próximo projeto.<br>Encontre o que seu carro precisa para seguir em frente.</p><a class="primary-button" href="#catalog">Encontre sua peça <span>↗</span></a><div class="hero-note"><span data-icon="check"></span> Peças selecionadas. Escolhas sem complicação.</div></div>
-      <div class="hero-art" aria-label="Ilustração de um disco de freio automotivo"><div class="art-grid"></div><span class="art-label">PERFORMANCE EM CADA DETALHE</span><div class="hero-part" id="hero-part"></div><div class="part-callout"><span class="callout-dot"></span><div>Feito para ir além.<small>Precisão que acompanha você.</small></div><span>↗</span></div><span class="art-index">01 / PEÇAS QUE MOVEM</span></div>
+  <main id="conteudo" class="container">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">ATENDIMENTO PARA SEGUIR EM FRENTE</p>
+        <h1 id="hero-title">A peça certa.<br>Uma boa <em>conversa.</em></h1>
+        <p class="hero-description">Precisa de uma peça para o seu carro? Conte o que você procura e consulte as opções com a Divolta.</p>
+        <a class="button" href="#contato">Solicitar atendimento <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">Peças, informações e orçamento em um só lugar.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span class="art-caption">PEÇAS QUE MOVEM SUA HISTÓRIA</span><div class="disc"><div class="disc-center"></div></div><div class="art-card"><span class="status-dot"></span><div>Seu próximo caminho<small>começa com a peça certa.</small></div><span>↗</span></div><span class="art-index">DIVOLTA / AUTOPEÇAS</span></div>
     </section>
-    <section class="benefits" aria-label="Benefícios"><div><span data-icon="shield"></span><p>Qualidade em primeiro lugar<small>Um catálogo escolhido com cuidado</small></p></div><div><span data-icon="tool"></span><p>A peça para o seu carro<small>Filtre pelo veículo e pela categoria</small></p></div><div><span data-icon="bag"></span><p>Sua seleção sempre por perto<small>Carrinho salvo neste navegador</small></p></div><div><span data-icon="heart"></span><p>Encontre. Salve. Compare.<small>Favorite suas próximas escolhas</small></p></div></section>
-    <section class="vehicle-bar" aria-labelledby="vehicle-title"><div class="vehicle-heading"><span data-icon="car"></span><div><h2 id="vehicle-title">Qual é o seu carro?</h2><p>Veja as peças compatíveis no catálogo.</p></div></div><form id="vehicle-form"><label class="sr-only" for="vehicle-brand">Marca</label><select id="vehicle-brand"><option value="">Selecione a marca</option><option>Chevrolet</option><option>Fiat</option><option>Volkswagen</option></select><label class="sr-only" for="vehicle-model">Modelo</label><select id="vehicle-model" disabled><option value="">Selecione o modelo</option></select><button type="submit">Buscar peças <span>→</span></button></form></section>
-    <section id="catalog" class="catalog"><div class="section-heading"><div><div class="eyebrow">SEU PRÓXIMO PASSO</div><h2>Peças em destaque<span>.</span></h2></div><p>O essencial para manter tudo em movimento.</p></div><div class="catalog-toolbar"><div class="categories" id="categories" aria-label="Categorias de peças"></div><label class="sort-label">Ordenar por <select id="sort"><option value="featured">Destaques</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="name">Nome</option></select></label></div><div id="filter-summary" class="filter-summary" hidden></div><div class="product-grid" id="products"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>Nenhuma peça encontrada</h3><p>Tente outra busca ou remova os filtros.</p><button id="reset-filters" class="primary-button">Limpar filtros</button></div><div class="catalog-bottom"><span id="result-count"></span><span>Precisa de uma peça? Comece pela categoria. ↗</span></div></section>
-    <section id="about" class="about"><div><div class="eyebrow">PRA QUEM GOSTA DE SEGUIR EM FRENTE</div><h2>Seu carro tem história.<br>A próxima parte é <em>com você.</em></h2></div><div><p>A Divolta nasceu de uma ideia simples: encontrar peças deve ser tão fácil quanto gostar de dirigir. Um espaço para cuidar, renovar e colocar seu carro de volta ao jogo.</p><a href="#catalog">Explore o catálogo <span>↗</span></a></div></section>
+    <section class="highlights" aria-label="Nosso atendimento">
+      <div><span class="highlight-icon" aria-hidden="true">↗</span><p>Consulta de peças<small>Conte o que você precisa</small></p></div>
+      <div><span class="highlight-icon" aria-hidden="true">✓</span><p>Informação para escolher<small>Confira a aplicação para seu carro</small></p></div>
+      <div><span class="highlight-icon" aria-hidden="true">＋</span><p>Pedido de orçamento<small>Consulte valores e disponibilidade</small></p></div>
+    </section>
+    <section class="section" id="pecas" aria-labelledby="pecas-title">
+      <div class="section-heading"><div><p class="eyebrow">O QUE VOCÊ ESTÁ PROCURANDO?</p><h2 id="pecas-title">Cuide de cada detalhe<span>.</span></h2></div><p>Converse com a gente sobre a peça de que precisa.</p></div>
+      <div class="parts-grid">
+        <article class="part-card"><span class="card-number">01 /</span><h3>Motor</h3><p>Correias, juntas e componentes para a manutenção do motor.</p><a href="#contato">Consultar peças <span aria-hidden="true">↗</span></a></article>
+        <article class="part-card"><span class="card-number">02 /</span><h3>Freios</h3><p>Pastilhas, discos e componentes para o sistema de frenagem.</p><a href="#contato">Consultar peças <span aria-hidden="true">↗</span></a></article>
+        <article class="part-card"><span class="card-number">03 /</span><h3>Suspensão</h3><p>Amortecedores, buchas e componentes de suspensão.</p><a href="#contato">Consultar peças <span aria-hidden="true">↗</span></a></article>
+        <article class="part-card"><span class="card-number">04 /</span><h3>Filtros e elétrica</h3><p>Filtros, velas e lâmpadas para os cuidados do dia a dia.</p><a href="#contato">Consultar peças <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+    <section class="how section" id="como-funciona" aria-labelledby="como-title">
+      <div class="how-heading"><p class="eyebrow">SIMPLES, DO COMEÇO AO FIM</p><h2 id="como-title">Vamos encontrar<br>o que você precisa.</h2><p>Algumas informações ajudam a identificar a peça e preparar seu orçamento.</p></div>
+      <ol class="steps">
+        <li><span>01</span><div><h3>Conte qual é o seu carro</h3><p>Informe a marca, o modelo, o ano e a motorização.</p></div></li>
+        <li><span>02</span><div><h3>Mostre o que você procura</h3><p>Tenha em mãos o nome, o código ou uma foto da peça, se possível.</p></div></li>
+        <li><span>03</span><div><h3>Consulte seu orçamento</h3><p>Confirme a aplicação, o valor e a disponibilidade durante o atendimento.</p></div></li>
+      </ol>
+    </section>
+    <section class="contact section" id="contato" aria-labelledby="contato-title">
+      <div class="contact-copy"><p class="eyebrow">ESTAMOS AQUI PARA AJUDAR</p><h2 id="contato-title">Seu carro tem história.<br>Vamos cuidar do<br><em>próximo capítulo.</em></h2><p>Para consultar uma peça ou solicitar um orçamento, utilize os canais de atendimento da loja.</p></div>
+      <!-- Preencha os dados reais da loja. Para WhatsApp, use um link https://wa.me/55DDDNUMERO. Para e-mail, use mailto: com o endereço real. -->
+      <div class="contact-info">
+        <div class="contact-row"><span class="contact-label">01 / WHATSAPP E TELEFONE</span><h3>Número a cadastrar</h3><p>Canal para consulta de peças e orçamento.</p></div>
+        <div class="contact-row"><span class="contact-label">02 / E-MAIL</span><h3>E-mail a cadastrar</h3><p>Envie as informações da peça e do veículo.</p></div>
+        <div class="contact-row"><span class="contact-label">03 / VISITE A LOJA</span><h3>Endereço a cadastrar</h3><p>Horário de atendimento a informar.</p></div>
+      </div>
+    </section>
+    <section class="faq section" id="duvidas" aria-labelledby="duvidas-title">
+      <div><p class="eyebrow">ANTES DE ENTRAR EM CONTATO</p><h2 id="duvidas-title">Dúvidas frequentes<span>.</span></h2><p>Um ponto de partida para seu atendimento.</p></div>
+      <div class="faq-list">
+        <details><summary>Como saber se a peça serve no meu carro?</summary><p>Informe a marca, o modelo, o ano e a motorização. Se tiver o código da peça, compartilhe também. A aplicação precisa ser confirmada antes da compra.</p></details>
+        <details><summary>Posso consultar preço e disponibilidade?</summary><p>Sim. Solicite um orçamento pelos canais de atendimento da loja e informe qual peça você procura. Valores e disponibilidade devem ser confirmados no atendimento.</p></details>
+        <details><summary>O que preciso para solicitar um orçamento?</summary><p>Tenha os dados do veículo e o nome da peça. Uma foto ou o código de referência também pode ajudar a identificar o componente.</p></details>
+      </div>
+    </section>
   </main>
-  <footer><a class="logo" href="#">di<span>volta</span><i></i><small>AUTOPEÇAS</small></a><p>Peças que conectam você ao próximo caminho.</p><span>© <span id="year"></span> Divolta</span><small>Loja demonstrativa. Preços e compatibilidades ilustrativos. Confirme a aplicação antes de comprar.</small></footer>
-  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div><aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden><div class="drawer-heading"><h2 id="cart-title">Seu carrinho<span>.</span></h2><button id="close-cart" class="icon-button" aria-label="Fechar carrinho">✕</button></div><p class="drawer-subtitle">Tudo pronto para seu próximo caminho.</p><div id="cart-items"></div><div class="cart-footer"><div class="total-row"><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div><button id="checkout-button" class="primary-button">Revisar minha seleção <span>→</span></button><p>Catálogo demonstrativo. Nenhum pagamento será cobrado.</p><div id="checkout-message" role="status" hidden></div></div></aside><div class="toast" id="toast" role="status" hidden></div>
+  <footer class="footer container"><a class="logo" href="#inicio" aria-label="Voltar ao início">di<span>volta</span><b>.</b><small>AUTOPEÇAS</small></a><p>Peças que conectam você ao próximo caminho.</p><span>© 2026 Divolta Autopeças</span></footer>
 </body>
 </html>

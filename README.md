@@ -1,22 +1,9 @@
-# Divolta Autopeças
+﻿# Divolta Autopeças — Atendimento
 
-Site responsivo em português, feito com HTML, CSS e JavaScript, sem dependências de execução.
+Página estática de atendimento feita apenas com HTML e CSS, sem JavaScript, dependências ou fontes externas.
 
-## Abrir
+Abra `index.html` no navegador. O site contém apresentação da loja, categorias de peças, orientações para solicitar orçamento, seção de contato e dúvidas frequentes. O layout se adapta a celulares e computadores. As dúvidas usam o elemento nativo HTML `details`.
 
-Abra `index.html` no navegador ou execute no diretório:
+Antes de publicar, substitua os campos de telefone, e-mail, endereço e horário na seção `contato` de `index.html`. Os dados estão identificados como “a cadastrar” para não apresentar contatos fictícios. Após preencher, transforme o telefone em link de WhatsApp (`https://wa.me/55DDDNUMERO`) e o e-mail em link `mailto:` com o endereço real.
 
-```powershell
-python -m http.server 3000
-```
-
-Acesse `http://localhost:3000`.
-
-## Recursos
-
-- Busca por peça, marca, código e modelo, com tratamento de acentos.
-- Filtros por categoria e veículo, ordenação por preço e nome.
-- Favoritos e carrinho persistidos no navegador, ajuste de quantidade e subtotal.
-- Layout responsivo, ilustrações SVG próprias e navegação por teclado.
-
-O catálogo, os preços e as compatibilidades são demonstrativos. A seleção por veículo não considera ano ou motorização. O botão de revisão exibe o resumo local; não realiza pedidos ou pagamentos. Para operar a loja, é necessário integrar estoque, compatibilidade real, frete, pagamento e pedidos. Edite o array `products` em `app.js` para personalizar o catálogo. As fontes usam Google Fonts, com alternativas locais caso não carreguem.
+Personalize cores e espaçamentos em `styles.css`.
