@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#c5f25b" />
+  <meta name="description" content="Divolta Autopeças. Encontre a peça certa para colocar seu carro de volta ao jogo." />
+  <title>Divolta — Autopeças</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Seu carro de volta ao jogo. <span>A peça certa está aqui.</span><span class="announcement-right">CATÁLOGO DEMONSTRATIVO</span></div>
+  <header class="header">
+    <a class="logo" href="#" aria-label="Divolta início">di<span>volta</span><i></i><small>AUTOPEÇAS</small></a>
+    <form class="search" id="search-form"><span data-icon="search"></span><input id="search" type="search" placeholder="Busque por peça, marca ou código…" aria-label="Buscar peças" /><kbd>/</kbd></form>
+    <div class="header-actions"><button id="favorites-button" class="icon-button" aria-label="Mostrar favoritos"><span data-icon="heart"></span></button><button id="cart-button" class="cart-button" aria-label="Abrir carrinho"><span data-icon="bag"></span><span class="cart-label">Carrinho</span><b id="cart-count">0</b></button></div>
+  </header>
+  <nav class="nav" aria-label="Navegação principal"><a href="#catalog" class="nav-main"><span data-icon="grid"></span> Todas as peças</a><a href="#catalog" data-nav-category="Motor">Motor</a><a href="#catalog" data-nav-category="Freios">Freios</a><a href="#catalog" data-nav-category="Suspensão">Suspensão</a><a href="#catalog" data-nav-category="Elétrica">Elétrica</a><a href="#catalog" data-nav-category="Filtros">Filtros</a><a href="#about" class="nav-about">Conheça a Divolta <span>↗</span></a></nav>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span></span> CUIDAR DO SEU CARRO COMEÇA AQUI</div><h1>Novas peças.<br>Novos <em>caminhos.</em></h1><p>Da manutenção de rotina ao próximo projeto.<br>Encontre o que seu carro precisa para seguir em frente.</p><a class="primary-button" href="#catalog">Encontre sua peça <span>↗</span></a><div class="hero-note"><span data-icon="check"></span> Peças selecionadas. Escolhas sem complicação.</div></div>
+      <div class="hero-art" aria-label="Ilustração de um disco de freio automotivo"><div class="art-grid"></div><span class="art-label">PERFORMANCE EM CADA DETALHE</span><div class="hero-part" id="hero-part"></div><div class="part-callout"><span class="callout-dot"></span><div>Feito para ir além.<small>Precisão que acompanha você.</small></div><span>↗</span></div><span class="art-index">01 / PEÇAS QUE MOVEM</span></div>
+    </section>
+    <section class="benefits" aria-label="Benefícios"><div><span data-icon="shield"></span><p>Qualidade em primeiro lugar<small>Um catálogo escolhido com cuidado</small></p></div><div><span data-icon="tool"></span><p>A peça para o seu carro<small>Filtre pelo veículo e pela categoria</small></p></div><div><span data-icon="bag"></span><p>Sua seleção sempre por perto<small>Carrinho salvo neste navegador</small></p></div><div><span data-icon="heart"></span><p>Encontre. Salve. Compare.<small>Favorite suas próximas escolhas</small></p></div></section>
+    <section class="vehicle-bar" aria-labelledby="vehicle-title"><div class="vehicle-heading"><span data-icon="car"></span><div><h2 id="vehicle-title">Qual é o seu carro?</h2><p>Veja as peças compatíveis no catálogo.</p></div></div><form id="vehicle-form"><label class="sr-only" for="vehicle-brand">Marca</label><select id="vehicle-brand"><option value="">Selecione a marca</option><option>Chevrolet</option><option>Fiat</option><option>Volkswagen</option></select><label class="sr-only" for="vehicle-model">Modelo</label><select id="vehicle-model" disabled><option value="">Selecione o modelo</option></select><button type="submit">Buscar peças <span>→</span></button></form></section>
+    <section id="catalog" class="catalog"><div class="section-heading"><div><div class="eyebrow">SEU PRÓXIMO PASSO</div><h2>Peças em destaque<span>.</span></h2></div><p>O essencial para manter tudo em movimento.</p></div><div class="catalog-toolbar"><div class="categories" id="categories" aria-label="Categorias de peças"></div><label class="sort-label">Ordenar por <select id="sort"><option value="featured">Destaques</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="name">Nome</option></select></label></div><div id="filter-summary" class="filter-summary" hidden></div><div class="product-grid" id="products"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>Nenhuma peça encontrada</h3><p>Tente outra busca ou remova os filtros.</p><button id="reset-filters" class="primary-button">Limpar filtros</button></div><div class="catalog-bottom"><span id="result-count"></span><span>Precisa de uma peça? Comece pela categoria. ↗</span></div></section>
+    <section id="about" class="about"><div><div class="eyebrow">PRA QUEM GOSTA DE SEGUIR EM FRENTE</div><h2>Seu carro tem história.<br>A próxima parte é <em>com você.</em></h2></div><div><p>A Divolta nasceu de uma ideia simples: encontrar peças deve ser tão fácil quanto gostar de dirigir. Um espaço para cuidar, renovar e colocar seu carro de volta ao jogo.</p><a href="#catalog">Explore o catálogo <span>↗</span></a></div></section>
+  </main>
+  <footer><a class="logo" href="#">di<span>volta</span><i></i><small>AUTOPEÇAS</small></a><p>Peças que conectam você ao próximo caminho.</p><span>© <span id="year"></span> Divolta</span><small>Loja demonstrativa. Preços e compatibilidades ilustrativos. Confirme a aplicação antes de comprar.</small></footer>
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div><aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden><div class="drawer-heading"><h2 id="cart-title">Seu carrinho<span>.</span></h2><button id="close-cart" class="icon-button" aria-label="Fechar carrinho">✕</button></div><p class="drawer-subtitle">Tudo pronto para seu próximo caminho.</p><div id="cart-items"></div><div class="cart-footer"><div class="total-row"><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div><button id="checkout-button" class="primary-button">Revisar minha seleção <span>→</span></button><p>Catálogo demonstrativo. Nenhum pagamento será cobrado.</p><div id="checkout-message" role="status" hidden></div></div></aside><div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
