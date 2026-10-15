@@ -1,0 +1,6 @@
+﻿Tool: built-in image_gen
+Reference: last user-attached white-background Rocha Peças Diesel logo
+Transparent background: true
+
+Prompt:
+Use case: logo-brand refinement / background-extraction. Edit target: the last attached white-background Rocha Peças Diesel logo. Reconstruct and polish this exact existing brand logo for website use: preserve the distinctive orange two interlocking angular chevrons/ribbon diamond symbol on the left, and the heavy forward-slanted custom black ROCHA wordmark on the right, with PEÇAS DIESEL below in bold italic uppercase. Exact text: ROCHA and PEÇAS DIESEL, preserve cedilla. Clean crisp professional edges, correct alignment and balanced spacing; improve resolution while preserving recognizability and proportions. Flat solid orange #f5820b symbol and black lettering, genuinely transparent background. Wide horizontal logo tightly composed with small safe transparent margins. No redesign, no extra text, no gradients, no shadows, no mockup, no border, no white background. Return final high quality transparent PNG suitable for placement on a light website header.

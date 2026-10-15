@@ -1,9 +1,11 @@
-﻿# Divolta Autopeças — Atendimento
+﻿# Rocha Peças Diesel
 
-Página estática de atendimento feita apenas com HTML e CSS, sem JavaScript, dependências ou fontes externas.
+Site estático de atendimento, apenas HTML e CSS, com identidade visual laranja, preto e branco baseada nas referências fornecidas.
 
-Abra `index.html` no navegador. O site contém apresentação da loja, categorias de peças, orientações para solicitar orçamento, seção de contato e dúvidas frequentes. O layout se adapta a celulares e computadores. As dúvidas usam o elemento nativo HTML `details`.
+Abra `index.html` no navegador. Inclui apresentação, categorias de peças diesel, história da empresa, orientações para orçamento, contato e dúvidas frequentes.
 
-Antes de publicar, substitua os campos de telefone, e-mail, endereço e horário na seção `contato` de `index.html`. Os dados estão identificados como “a cadastrar” para não apresentar contatos fictícios. Após preencher, transforme o telefone em link de WhatsApp (`https://wa.me/55DDDNUMERO`) e o e-mail em link `mailto:` com o endereço real.
+A logo refinada por IA fica em `assets/rocha-logo.png`. O registro do prompt fica em `assets/logo-prompt.txt`.
 
-Personalize cores e espaçamentos em `styles.css`.
+Preencha telefone, e-mail, endereço e horário na seção `contato` antes de publicar. Os 24 anos de história seguem a arte enviada; atualize esse dado conforme o aniversário da empresa.
+
+O domínio configurado em `CNAME` permanece o existente. Para publicar no domínio da Rocha, ajuste esse arquivo e o DNS do domínio.
